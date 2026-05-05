@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Student ID: U3293891</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact-area">
+            <h1>Get in Touch with me!</h1>
+            <p>Complete the form below to get in touch with me, so we can get the finer details down.</p>
+            <form id="contactForm" novalidate>
+                <div class="field">
+                    <label for="userName">Name</label>
+                    <input type="text" id="userName" name="userName">
+                </div>
+                <div class="field">
+                    <label for="userEmail">Email</label>
+                    <input type="text" id="userEmail" name="userEmail">
+                </div>
+                <div class="field">
+                    <label for="userMessage">Message</label>
+                    <textarea id="userMessage" name="userMessage" rows="5"></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Send Message</button>
+            </form>
+            <div id="success-box" class="hidden" aria-live="polite">
+                <p>Success! Your message has been sent.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('success-box');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            form.style.display = 'none';
+            success.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
