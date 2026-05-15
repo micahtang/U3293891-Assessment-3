@@ -58,7 +58,7 @@ button {
 .hidden {
     display: none;
 }
-#success-box {
+.success-box {
     background-color: #d1f2eb;
     color: #0b5345;
     padding: 20px;
